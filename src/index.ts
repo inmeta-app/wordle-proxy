@@ -16,7 +16,12 @@ function formatTimestamp(timestamp: number) {
 app.use(
   "/",
   cors({
-    origin: ["https://wordle.inmeta.site", "https://inmeta.app"],
+    origin: [
+      "https://wordle.inmeta.site",
+      "https://inmeta.app",
+      // For development 😉
+      "http://localhost:3000",
+    ],
     allowMethods: ["GET", "OPTIONS"],
     exposeHeaders: ["Content-Length"],
   })
